@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A2B69991287F8F88008C6A9F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2B69990287F8F88008C6A9F /* main.cpp */; };
 		A2B69999287F9EDA008C6A9F /* Point.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2B69997287F9EDA008C6A9F /* Point.cpp */; };
+		A2B6999C28820829008C6A9F /* HashTable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2B6999A28820829008C6A9F /* HashTable.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +29,8 @@
 		A2B69990287F8F88008C6A9F /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		A2B69997287F9EDA008C6A9F /* Point.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Point.cpp; sourceTree = "<group>"; };
 		A2B69998287F9EDA008C6A9F /* Point.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Point.hpp; sourceTree = "<group>"; };
+		A2B6999A28820829008C6A9F /* HashTable.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = HashTable.cpp; sourceTree = "<group>"; };
+		A2B6999B28820829008C6A9F /* HashTable.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = HashTable.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +66,8 @@
 				A2B69990287F8F88008C6A9F /* main.cpp */,
 				A2B69997287F9EDA008C6A9F /* Point.cpp */,
 				A2B69998287F9EDA008C6A9F /* Point.hpp */,
+				A2B6999A28820829008C6A9F /* HashTable.cpp */,
+				A2B6999B28820829008C6A9F /* HashTable.hpp */,
 			);
 			path = "PracticeC++";
 			sourceTree = "<group>";
@@ -126,6 +131,7 @@
 			files = (
 				A2B69999287F9EDA008C6A9F /* Point.cpp in Sources */,
 				A2B69991287F8F88008C6A9F /* main.cpp in Sources */,
+				A2B6999C28820829008C6A9F /* HashTable.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
