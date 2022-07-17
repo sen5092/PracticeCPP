@@ -10,7 +10,7 @@ using namespace std;
 
 #include "Point.hpp"
 #include "HashTable.hpp"
-
+#include <string>
 
 
 
@@ -25,6 +25,8 @@ void sort_three_floats (float& x, float& y, float& z);
 void reverse (float array[], int size);
 float sumFloats(float array[], int size);
 int indexOfLargest (int array[], int size);
+
+bool allCharsUnique(string str);
 
 
 int main(int argc, const char * argv[])
@@ -162,6 +164,18 @@ int main(int argc, const char * argv[])
     
     
     cout << "Total size of floats in array is: " << sumFloats(array, size) << endl;
+    
+    
+    int totalSize = 7;
+    int intArray[] = {58, 26, 91, 34, 70, 91, 88};
+    cout << "Index of the largest value is: " << indexOfLargest(intArray, totalSize) << endl;
+    
+    
+    cout << "Is string char unique? " << allCharsUnique("hello") << endl;
+    cout << "Is string char unique? " << allCharsUnique("AaBb") << endl;
+    cout << "Is string char unique? " << allCharsUnique("12341") << endl;
+    cout << "Is string char unique? " << allCharsUnique("hello") << endl;
+    
     
     // let's use our hashtable now to store things :)
     
@@ -412,5 +426,30 @@ int indexOfLargest(int array[], int size)
         }
     }
     
-    return i;
+    return index;
+}
+
+
+bool allCharsUniqueu(string str)
+{
+    
+    
+    for (int j = 0; j < str.length(); j++)
+    {
+        char charToCheck = str[j];
+        
+        for (int i = j+1; i < str.length(); i++)
+        {
+            if (charToCheck == str[i])
+            {
+                return false;
+            }
+        }
+    }
+    
+    return true;
+    
+
+    
+    
 }
