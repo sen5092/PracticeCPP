@@ -10,9 +10,11 @@ using namespace std;
 
 #include "Point.hpp"
 #include "HashTable.hpp"
+#include "BitManipulator.hpp"
 #include <string>
 
-
+void usesMightGoWrong();
+void mightGoWrong();
 
 int enough (int goal);
 int sum_from_to (int first, int last);
@@ -26,13 +28,35 @@ void reverse (float array[], int size);
 float sumFloats(float array[], int size);
 int indexOfLargest (int array[], int size);
 
-bool allCharsUnique(string str);
+bool allCharsUnique(const string str);
 
+void pointerTest (int* ptr1, int*& ptr2);
+
+unsigned int myStrLen(const char* str);
+
+void testBitManipulator();
 
 int main(int argc, const char * argv[])
 {
     // insert code here...
     std::cout << "Hello, World!\n";
+    
+    try
+    {
+        usesMightGoWrong();
+    }
+    catch (int e)
+    {
+        cout << "Error code " << e << endl;
+    }
+    catch (char const* e)
+    {
+        cout << "error message " << e << endl;
+    }
+    catch (string &e) // need to catch a string with a reference with exceptions when catching an object
+    {
+        cout << "stirng error mesagge" << e << endl;
+    }
     
     
     Point myPoint =  Point(1, 2);
@@ -170,12 +194,28 @@ int main(int argc, const char * argv[])
     int intArray[] = {58, 26, 91, 34, 70, 91, 88};
     cout << "Index of the largest value is: " << indexOfLargest(intArray, totalSize) << endl;
     
-    
+    string hello ("heasd");
+    char* meh = "asda";
+  //  allCharsUnique(hello);
     cout << "Is string char unique? " << allCharsUnique("hello") << endl;
     cout << "Is string char unique? " << allCharsUnique("AaBb") << endl;
     cout << "Is string char unique? " << allCharsUnique("12341") << endl;
-    cout << "Is string char unique? " << allCharsUnique("hello") << endl;
+    cout << "Is string char unique? " << allCharsUnique("tom's jackel") << endl;
     
+    testBitManipulator();
+    
+
+    const char* testStr = "moop";
+    cout << myStrLen(testStr) << endl;
+    
+    
+    cout << "Pointer fun!" << endl;
+    
+    int* myPtr1;
+    int* myPtr2;
+    cout << &myPtr1 << endl;
+    cout << &myPtr2 << endl;
+    pointerTest(myPtr1, myPtr2);
     
     // let's use our hashtable now to store things :)
     
@@ -403,7 +443,7 @@ void reverse (float array[], int size)
 
 float sumFloats(float array[], int size)
 {
-    float total;
+    float total = 0;
     for (int i = 0; i < size; i++)
     {
         total += array[i];
@@ -430,14 +470,14 @@ int indexOfLargest(int array[], int size)
 }
 
 
-bool allCharsUniqueu(string str)
+bool allCharsUnique(const string str)
 {
-    
-    
+
+
     for (int j = 0; j < str.length(); j++)
     {
         char charToCheck = str[j];
-        
+
         for (int i = j+1; i < str.length(); i++)
         {
             if (charToCheck == str[i])
@@ -446,10 +486,84 @@ bool allCharsUniqueu(string str)
             }
         }
     }
-    
-    return true;
-    
 
+    return true;
+
+
+
+
+}
+
+unsigned int myStrLen(const char* str)
+{
+    return 0;
+    int i = 0;
+    int count = 0;
+    while (str[i] != '\0')
+    {
+        count++;
+    }
     
+    return count;
+}
+
+
+void pointerTest(int* ptrCopy, int*& ptrRef)
+{
+    cout << &ptrCopy << endl;
+    cout << &ptrRef << endl;
+}
+
+
+
+void testBitManipulator()
+{
+    BitManipulator myObj = BitManipulator();
     
+    int value1 = 0xABCD;
+    int value2 = 0x1234;
+    int value3 = 0x5678;
+    int value4 = 0xABDF;
+    
+    cout << "Get nth bit " << myObj.getNthBit(value1, 2) << endl;
+    cout << "Get nth bit " << myObj.getNthBit(value2, 6) << endl;
+    cout << "Get nth bit " << myObj.getNthBit(value3, 11) << endl;
+    cout << "Get nth bit " << myObj.getNthBit(value4, 31) << endl;
+    
+    myObj.printBits(0xAAAA);
+    
+    int count = myObj.countNumberOfBitsSet(0xAAAA);
+    cout << count << endl;
+    
+    count = myObj.countNumOfBitsSetOped(0xAAAA);
+    cout << count << endl;
+    
+    count = myObj.reverseBits(0xAAAA);
+    cout << count << endl;
+    
+}
+
+
+void usesMightGoWrong()
+{
+    mightGoWrong();
+}
+
+
+// exceptions get thrown all the way up tthe stack 
+void mightGoWrong()
+{
+    bool error1 = true;
+    bool error2 = true;
+    
+    // a throw is basically a return.
+    if (error1)
+    {
+        throw "error";
+    }
+    
+    if (error2)
+    {
+        throw string("bahahahaha");
+    }
 }

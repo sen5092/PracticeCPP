@@ -10,6 +10,12 @@
 		A2B69991287F8F88008C6A9F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2B69990287F8F88008C6A9F /* main.cpp */; };
 		A2B69999287F9EDA008C6A9F /* Point.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2B69997287F9EDA008C6A9F /* Point.cpp */; };
 		A2B6999C28820829008C6A9F /* HashTable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2B6999A28820829008C6A9F /* HashTable.cpp */; };
+		A2BC39BD2886229B001A3D4C /* LinkedList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2BC39BB2886229B001A3D4C /* LinkedList.cpp */; };
+		A2C1AF3B28870E6100B89459 /* UnitTester.m in Sources */ = {isa = PBXBuildFile; fileRef = A2C1AF3A28870E6100B89459 /* UnitTester.m */; };
+		A2C1AF4028870EDE00B89459 /* LinkedListsTester.m in Sources */ = {isa = PBXBuildFile; fileRef = A2C1AF3F28870EDE00B89459 /* LinkedListsTester.m */; };
+		A2C1AF512887259900B89459 /* testingtster.mm in Sources */ = {isa = PBXBuildFile; fileRef = A2C1AF502887259900B89459 /* testingtster.mm */; };
+		A2C1AF5228872A2500B89459 /* LinkedList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2BC39BB2886229B001A3D4C /* LinkedList.cpp */; };
+		A2C1AF55288747CC00B89459 /* BitManipulator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2C1AF53288747CC00B89459 /* BitManipulator.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,10 +37,33 @@
 		A2B69998287F9EDA008C6A9F /* Point.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Point.hpp; sourceTree = "<group>"; };
 		A2B6999A28820829008C6A9F /* HashTable.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = HashTable.cpp; sourceTree = "<group>"; };
 		A2B6999B28820829008C6A9F /* HashTable.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = HashTable.hpp; sourceTree = "<group>"; };
+		A2BC39BB2886229B001A3D4C /* LinkedList.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LinkedList.cpp; sourceTree = "<group>"; };
+		A2BC39BC2886229B001A3D4C /* LinkedList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LinkedList.hpp; sourceTree = "<group>"; };
+		A2C1AF3828870E6100B89459 /* UnitTester.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTester.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2C1AF3A28870E6100B89459 /* UnitTester.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UnitTester.m; sourceTree = "<group>"; };
+		A2C1AF3F28870EDE00B89459 /* LinkedListsTester.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LinkedListsTester.m; sourceTree = "<group>"; };
+		A2C1AF4728871FB700B89459 /* testingtster.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testingtster.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2C1AF502887259900B89459 /* testingtster.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = testingtster.mm; sourceTree = "<group>"; };
+		A2C1AF53288747CC00B89459 /* BitManipulator.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BitManipulator.cpp; sourceTree = "<group>"; };
+		A2C1AF54288747CC00B89459 /* BitManipulator.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BitManipulator.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		A2B6998A287F8F88008C6A9F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2C1AF3528870E6100B89459 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2C1AF4428871FB700B89459 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -48,6 +77,8 @@
 			isa = PBXGroup;
 			children = (
 				A2B6998F287F8F88008C6A9F /* PracticeC++ */,
+				A2C1AF3928870E6100B89459 /* UnitTester */,
+				A2C1AF4828871FB700B89459 /* testingtster */,
 				A2B6998E287F8F88008C6A9F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,6 +87,8 @@
 			isa = PBXGroup;
 			children = (
 				A2B6998D287F8F88008C6A9F /* PracticeC++ */,
+				A2C1AF3828870E6100B89459 /* UnitTester.xctest */,
+				A2C1AF4728871FB700B89459 /* testingtster.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -68,8 +101,29 @@
 				A2B69998287F9EDA008C6A9F /* Point.hpp */,
 				A2B6999A28820829008C6A9F /* HashTable.cpp */,
 				A2B6999B28820829008C6A9F /* HashTable.hpp */,
+				A2BC39BB2886229B001A3D4C /* LinkedList.cpp */,
+				A2BC39BC2886229B001A3D4C /* LinkedList.hpp */,
+				A2C1AF53288747CC00B89459 /* BitManipulator.cpp */,
+				A2C1AF54288747CC00B89459 /* BitManipulator.hpp */,
 			);
 			path = "PracticeC++";
+			sourceTree = "<group>";
+		};
+		A2C1AF3928870E6100B89459 /* UnitTester */ = {
+			isa = PBXGroup;
+			children = (
+				A2C1AF3A28870E6100B89459 /* UnitTester.m */,
+				A2C1AF3F28870EDE00B89459 /* LinkedListsTester.m */,
+			);
+			path = UnitTester;
+			sourceTree = "<group>";
+		};
+		A2C1AF4828871FB700B89459 /* testingtster */ = {
+			isa = PBXGroup;
+			children = (
+				A2C1AF502887259900B89459 /* testingtster.mm */,
+			);
+			path = testingtster;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -92,6 +146,40 @@
 			productReference = A2B6998D287F8F88008C6A9F /* PracticeC++ */;
 			productType = "com.apple.product-type.tool";
 		};
+		A2C1AF3728870E6100B89459 /* UnitTester */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A2C1AF3E28870E6100B89459 /* Build configuration list for PBXNativeTarget "UnitTester" */;
+			buildPhases = (
+				A2C1AF3428870E6100B89459 /* Sources */,
+				A2C1AF3528870E6100B89459 /* Frameworks */,
+				A2C1AF3628870E6100B89459 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UnitTester;
+			productName = UnitTester;
+			productReference = A2C1AF3828870E6100B89459 /* UnitTester.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A2C1AF4628871FB700B89459 /* testingtster */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A2C1AF4B28871FB700B89459 /* Build configuration list for PBXNativeTarget "testingtster" */;
+			buildPhases = (
+				A2C1AF4328871FB700B89459 /* Sources */,
+				A2C1AF4428871FB700B89459 /* Frameworks */,
+				A2C1AF4528871FB700B89459 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = testingtster;
+			productName = testingtster;
+			productReference = A2C1AF4728871FB700B89459 /* testingtster.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -102,6 +190,12 @@
 				LastUpgradeCheck = 1320;
 				TargetAttributes = {
 					A2B6998C287F8F88008C6A9F = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					A2C1AF3728870E6100B89459 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					A2C1AF4628871FB700B89459 = {
 						CreatedOnToolsVersion = 13.2.1;
 					};
 				};
@@ -120,9 +214,28 @@
 			projectRoot = "";
 			targets = (
 				A2B6998C287F8F88008C6A9F /* PracticeC++ */,
+				A2C1AF3728870E6100B89459 /* UnitTester */,
+				A2C1AF4628871FB700B89459 /* testingtster */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A2C1AF3628870E6100B89459 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2C1AF4528871FB700B89459 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A2B69989287F8F88008C6A9F /* Sources */ = {
@@ -131,7 +244,27 @@
 			files = (
 				A2B69999287F9EDA008C6A9F /* Point.cpp in Sources */,
 				A2B69991287F8F88008C6A9F /* main.cpp in Sources */,
+				A2BC39BD2886229B001A3D4C /* LinkedList.cpp in Sources */,
 				A2B6999C28820829008C6A9F /* HashTable.cpp in Sources */,
+				A2C1AF55288747CC00B89459 /* BitManipulator.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2C1AF3428870E6100B89459 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2C1AF3B28870E6100B89459 /* UnitTester.m in Sources */,
+				A2C1AF4028870EDE00B89459 /* LinkedListsTester.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2C1AF4328871FB700B89459 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2C1AF5228872A2500B89459 /* LinkedList.cpp in Sources */,
+				A2C1AF512887259900B89459 /* testingtster.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +402,62 @@
 			};
 			name = Release;
 		};
+		A2C1AF3C28870E6100B89459 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7XFT9HGW5H;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ScottNovak.UnitTester;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+			};
+			name = Debug;
+		};
+		A2C1AF3D28870E6100B89459 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7XFT9HGW5H;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ScottNovak.UnitTester;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+			};
+			name = Release;
+		};
+		A2C1AF4C28871FB700B89459 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7XFT9HGW5H;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ScottNovak.testingtster;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+			};
+			name = Debug;
+		};
+		A2C1AF4D28871FB700B89459 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7XFT9HGW5H;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ScottNovak.testingtster;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -286,6 +475,24 @@
 			buildConfigurations = (
 				A2B69995287F8F88008C6A9F /* Debug */,
 				A2B69996287F8F88008C6A9F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A2C1AF3E28870E6100B89459 /* Build configuration list for PBXNativeTarget "UnitTester" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2C1AF3C28870E6100B89459 /* Debug */,
+				A2C1AF3D28870E6100B89459 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A2C1AF4B28871FB700B89459 /* Build configuration list for PBXNativeTarget "testingtster" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2C1AF4C28871FB700B89459 /* Debug */,
+				A2C1AF4D28871FB700B89459 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
