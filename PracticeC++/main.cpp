@@ -12,9 +12,11 @@ using namespace std;
 #include "HashTable.hpp"
 #include "BitManipulator.hpp"
 #include <string>
+#include <exception>
+#include "ExceptionPractice.hpp"
+#include "TextFilePractice.hpp"
 
-void usesMightGoWrong();
-void mightGoWrong();
+
 
 int enough (int goal);
 int sum_from_to (int first, int last);
@@ -36,27 +38,28 @@ unsigned int myStrLen(const char* str);
 
 void testBitManipulator();
 
+
+
+
+
+
+
+
+
+
+
 int main(int argc, const char * argv[])
 {
     // insert code here...
     std::cout << "Hello, World!\n";
     
-    try
-    {
-        usesMightGoWrong();
-    }
-    catch (int e)
-    {
-        cout << "Error code " << e << endl;
-    }
-    catch (char const* e)
-    {
-        cout << "error message " << e << endl;
-    }
-    catch (string &e) // need to catch a string with a reference with exceptions when catching an object
-    {
-        cout << "stirng error mesagge" << e << endl;
-    }
+    practiceExceptions();
+    
+    practiceTextFileStuff();
+    
+
+    
+    // --------------------------- //
     
     
     Point myPoint =  Point(1, 2);
@@ -544,26 +547,4 @@ void testBitManipulator()
 }
 
 
-void usesMightGoWrong()
-{
-    mightGoWrong();
-}
 
-
-// exceptions get thrown all the way up tthe stack 
-void mightGoWrong()
-{
-    bool error1 = true;
-    bool error2 = true;
-    
-    // a throw is basically a return.
-    if (error1)
-    {
-        throw "error";
-    }
-    
-    if (error2)
-    {
-        throw string("bahahahaha");
-    }
-}

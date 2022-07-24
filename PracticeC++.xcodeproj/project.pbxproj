@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A220F7A3288DA7A20089EE56 /* ExceptionPractice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A220F7A1288DA7A20089EE56 /* ExceptionPractice.cpp */; };
+		A220F7A6288DAAEF0089EE56 /* TextFilePractice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A220F7A4288DAAEF0089EE56 /* TextFilePractice.cpp */; };
 		A2B69991287F8F88008C6A9F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2B69990287F8F88008C6A9F /* main.cpp */; };
 		A2B69999287F9EDA008C6A9F /* Point.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2B69997287F9EDA008C6A9F /* Point.cpp */; };
 		A2B6999C28820829008C6A9F /* HashTable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2B6999A28820829008C6A9F /* HashTable.cpp */; };
 		A2BC39BD2886229B001A3D4C /* LinkedList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2BC39BB2886229B001A3D4C /* LinkedList.cpp */; };
-		A2C1AF3B28870E6100B89459 /* UnitTester.m in Sources */ = {isa = PBXBuildFile; fileRef = A2C1AF3A28870E6100B89459 /* UnitTester.m */; };
-		A2C1AF4028870EDE00B89459 /* LinkedListsTester.m in Sources */ = {isa = PBXBuildFile; fileRef = A2C1AF3F28870EDE00B89459 /* LinkedListsTester.m */; };
 		A2C1AF512887259900B89459 /* testingtster.mm in Sources */ = {isa = PBXBuildFile; fileRef = A2C1AF502887259900B89459 /* testingtster.mm */; };
 		A2C1AF5228872A2500B89459 /* LinkedList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2BC39BB2886229B001A3D4C /* LinkedList.cpp */; };
 		A2C1AF55288747CC00B89459 /* BitManipulator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2C1AF53288747CC00B89459 /* BitManipulator.cpp */; };
@@ -31,17 +31,20 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A220F7A1288DA7A20089EE56 /* ExceptionPractice.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ExceptionPractice.cpp; sourceTree = "<group>"; };
+		A220F7A2288DA7A20089EE56 /* ExceptionPractice.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ExceptionPractice.hpp; sourceTree = "<group>"; };
+		A220F7A4288DAAEF0089EE56 /* TextFilePractice.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TextFilePractice.cpp; sourceTree = "<group>"; };
+		A220F7A5288DAAEF0089EE56 /* TextFilePractice.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TextFilePractice.hpp; sourceTree = "<group>"; };
 		A2B6998D287F8F88008C6A9F /* PracticeC++ */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "PracticeC++"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2B69990287F8F88008C6A9F /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		A2B69997287F9EDA008C6A9F /* Point.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Point.cpp; sourceTree = "<group>"; };
 		A2B69998287F9EDA008C6A9F /* Point.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Point.hpp; sourceTree = "<group>"; };
 		A2B6999A28820829008C6A9F /* HashTable.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = HashTable.cpp; sourceTree = "<group>"; };
 		A2B6999B28820829008C6A9F /* HashTable.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = HashTable.hpp; sourceTree = "<group>"; };
+		A2BBCAEB288DCD6F00E14EF1 /* test.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test.txt; sourceTree = "<group>"; };
 		A2BC39BB2886229B001A3D4C /* LinkedList.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LinkedList.cpp; sourceTree = "<group>"; };
 		A2BC39BC2886229B001A3D4C /* LinkedList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LinkedList.hpp; sourceTree = "<group>"; };
 		A2C1AF3828870E6100B89459 /* UnitTester.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTester.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A2C1AF3A28870E6100B89459 /* UnitTester.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UnitTester.m; sourceTree = "<group>"; };
-		A2C1AF3F28870EDE00B89459 /* LinkedListsTester.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LinkedListsTester.m; sourceTree = "<group>"; };
 		A2C1AF4728871FB700B89459 /* testingtster.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testingtster.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2C1AF502887259900B89459 /* testingtster.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = testingtster.mm; sourceTree = "<group>"; };
 		A2C1AF53288747CC00B89459 /* BitManipulator.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BitManipulator.cpp; sourceTree = "<group>"; };
@@ -77,7 +80,6 @@
 			isa = PBXGroup;
 			children = (
 				A2B6998F287F8F88008C6A9F /* PracticeC++ */,
-				A2C1AF3928870E6100B89459 /* UnitTester */,
 				A2C1AF4828871FB700B89459 /* testingtster */,
 				A2B6998E287F8F88008C6A9F /* Products */,
 			);
@@ -96,6 +98,7 @@
 		A2B6998F287F8F88008C6A9F /* PracticeC++ */ = {
 			isa = PBXGroup;
 			children = (
+				A2BBCAEB288DCD6F00E14EF1 /* test.txt */,
 				A2B69990287F8F88008C6A9F /* main.cpp */,
 				A2B69997287F9EDA008C6A9F /* Point.cpp */,
 				A2B69998287F9EDA008C6A9F /* Point.hpp */,
@@ -105,17 +108,12 @@
 				A2BC39BC2886229B001A3D4C /* LinkedList.hpp */,
 				A2C1AF53288747CC00B89459 /* BitManipulator.cpp */,
 				A2C1AF54288747CC00B89459 /* BitManipulator.hpp */,
+				A220F7A1288DA7A20089EE56 /* ExceptionPractice.cpp */,
+				A220F7A2288DA7A20089EE56 /* ExceptionPractice.hpp */,
+				A220F7A4288DAAEF0089EE56 /* TextFilePractice.cpp */,
+				A220F7A5288DAAEF0089EE56 /* TextFilePractice.hpp */,
 			);
 			path = "PracticeC++";
-			sourceTree = "<group>";
-		};
-		A2C1AF3928870E6100B89459 /* UnitTester */ = {
-			isa = PBXGroup;
-			children = (
-				A2C1AF3A28870E6100B89459 /* UnitTester.m */,
-				A2C1AF3F28870EDE00B89459 /* LinkedListsTester.m */,
-			);
-			path = UnitTester;
 			sourceTree = "<group>";
 		};
 		A2C1AF4828871FB700B89459 /* testingtster */ = {
@@ -244,9 +242,11 @@
 			files = (
 				A2B69999287F9EDA008C6A9F /* Point.cpp in Sources */,
 				A2B69991287F8F88008C6A9F /* main.cpp in Sources */,
+				A220F7A3288DA7A20089EE56 /* ExceptionPractice.cpp in Sources */,
 				A2BC39BD2886229B001A3D4C /* LinkedList.cpp in Sources */,
 				A2B6999C28820829008C6A9F /* HashTable.cpp in Sources */,
 				A2C1AF55288747CC00B89459 /* BitManipulator.cpp in Sources */,
+				A220F7A6288DAAEF0089EE56 /* TextFilePractice.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,8 +254,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2C1AF3B28870E6100B89459 /* UnitTester.m in Sources */,
-				A2C1AF4028870EDE00B89459 /* LinkedListsTester.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
