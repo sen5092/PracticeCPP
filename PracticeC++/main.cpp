@@ -15,7 +15,8 @@ using namespace std;
 #include <exception>
 #include "ExceptionPractice.hpp"
 #include "TextFilePractice.hpp"
-
+#include "BinaryFiles.hpp"
+#include "STLPractice.hpp"
 
 
 int enough (int goal);
@@ -57,6 +58,26 @@ int main(int argc, const char * argv[])
     
     practiceTextFileStuff();
     
+    practiceReadingTextFiles();
+    
+    practiceParsingTextFile();
+    
+    practiceReadingBinaryFiles();
+    
+    practiceWritingBinaryFiles();
+    
+    
+    practiceVector();
+    
+    practiceLists();
+    
+    practiceMaps();
+    
+    practiceSets();
+    
+    practiceStackQueue();
+    
+    practiceOtherSTL();
 
     
     // --------------------------- //
@@ -198,7 +219,7 @@ int main(int argc, const char * argv[])
     cout << "Index of the largest value is: " << indexOfLargest(intArray, totalSize) << endl;
     
     string hello ("heasd");
-    char* meh = "asda";
+    //char* meh = "asda";
   //  allCharsUnique(hello);
     cout << "Is string char unique? " << allCharsUnique("hello") << endl;
     cout << "Is string char unique? " << allCharsUnique("AaBb") << endl;
@@ -327,7 +348,6 @@ bool is_prime(int num)
         return false;
     }
     
-    bool prime = false;
     
     for (int i = 2; i < num; i++)
     {
@@ -500,14 +520,6 @@ bool allCharsUnique(const string str)
 unsigned int myStrLen(const char* str)
 {
     return 0;
-    int i = 0;
-    int count = 0;
-    while (str[i] != '\0')
-    {
-        count++;
-    }
-    
-    return count;
 }
 
 

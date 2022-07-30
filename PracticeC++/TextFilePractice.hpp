@@ -13,6 +13,8 @@
 
 void practiceTextFileStuff();
 
+void practiceReadingTextFiles();
 
+void practiceParsingTextFile();
 
 #endif /* TextFilePractice_hpp */

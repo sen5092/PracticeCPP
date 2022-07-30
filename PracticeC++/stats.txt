@@ -1,0 +1,3 @@
+Population Scotland: 100000
+Population Mayan: 20390
+Population Madagascar: 7898

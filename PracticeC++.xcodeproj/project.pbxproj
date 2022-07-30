@@ -12,6 +12,8 @@
 		A2B69991287F8F88008C6A9F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2B69990287F8F88008C6A9F /* main.cpp */; };
 		A2B69999287F9EDA008C6A9F /* Point.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2B69997287F9EDA008C6A9F /* Point.cpp */; };
 		A2B6999C28820829008C6A9F /* HashTable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2B6999A28820829008C6A9F /* HashTable.cpp */; };
+		A2BBCAEF288DD38B00E14EF1 /* BinaryFiles.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2BBCAED288DD38B00E14EF1 /* BinaryFiles.cpp */; };
+		A2BBCAF2288DD88800E14EF1 /* STLPractice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2BBCAF0288DD88800E14EF1 /* STLPractice.cpp */; };
 		A2BC39BD2886229B001A3D4C /* LinkedList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2BC39BB2886229B001A3D4C /* LinkedList.cpp */; };
 		A2C1AF512887259900B89459 /* testingtster.mm in Sources */ = {isa = PBXBuildFile; fileRef = A2C1AF502887259900B89459 /* testingtster.mm */; };
 		A2C1AF5228872A2500B89459 /* LinkedList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2BC39BB2886229B001A3D4C /* LinkedList.cpp */; };
@@ -42,6 +44,11 @@
 		A2B6999A28820829008C6A9F /* HashTable.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = HashTable.cpp; sourceTree = "<group>"; };
 		A2B6999B28820829008C6A9F /* HashTable.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = HashTable.hpp; sourceTree = "<group>"; };
 		A2BBCAEB288DCD6F00E14EF1 /* test.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test.txt; sourceTree = "<group>"; };
+		A2BBCAEC288DD03800E14EF1 /* stats.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = stats.txt; sourceTree = "<group>"; };
+		A2BBCAED288DD38B00E14EF1 /* BinaryFiles.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BinaryFiles.cpp; sourceTree = "<group>"; };
+		A2BBCAEE288DD38B00E14EF1 /* BinaryFiles.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BinaryFiles.hpp; sourceTree = "<group>"; };
+		A2BBCAF0288DD88800E14EF1 /* STLPractice.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = STLPractice.cpp; sourceTree = "<group>"; };
+		A2BBCAF1288DD88800E14EF1 /* STLPractice.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = STLPractice.hpp; sourceTree = "<group>"; };
 		A2BC39BB2886229B001A3D4C /* LinkedList.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LinkedList.cpp; sourceTree = "<group>"; };
 		A2BC39BC2886229B001A3D4C /* LinkedList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LinkedList.hpp; sourceTree = "<group>"; };
 		A2C1AF3828870E6100B89459 /* UnitTester.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTester.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -112,6 +119,11 @@
 				A220F7A2288DA7A20089EE56 /* ExceptionPractice.hpp */,
 				A220F7A4288DAAEF0089EE56 /* TextFilePractice.cpp */,
 				A220F7A5288DAAEF0089EE56 /* TextFilePractice.hpp */,
+				A2BBCAEC288DD03800E14EF1 /* stats.txt */,
+				A2BBCAED288DD38B00E14EF1 /* BinaryFiles.cpp */,
+				A2BBCAEE288DD38B00E14EF1 /* BinaryFiles.hpp */,
+				A2BBCAF0288DD88800E14EF1 /* STLPractice.cpp */,
+				A2BBCAF1288DD88800E14EF1 /* STLPractice.hpp */,
 			);
 			path = "PracticeC++";
 			sourceTree = "<group>";
@@ -240,12 +252,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2BBCAEF288DD38B00E14EF1 /* BinaryFiles.cpp in Sources */,
 				A2B69999287F9EDA008C6A9F /* Point.cpp in Sources */,
 				A2B69991287F8F88008C6A9F /* main.cpp in Sources */,
 				A220F7A3288DA7A20089EE56 /* ExceptionPractice.cpp in Sources */,
 				A2BC39BD2886229B001A3D4C /* LinkedList.cpp in Sources */,
 				A2B6999C28820829008C6A9F /* HashTable.cpp in Sources */,
 				A2C1AF55288747CC00B89459 /* BitManipulator.cpp in Sources */,
+				A2BBCAF2288DD88800E14EF1 /* STLPractice.cpp in Sources */,
 				A220F7A6288DAAEF0089EE56 /* TextFilePractice.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

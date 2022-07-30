@@ -43,3 +43,76 @@ void practiceTextFileStuff()
     
     
 }
+
+
+void practiceReadingTextFiles()
+{
+    cout << "Practing Reading Text Files" << endl;
+    
+    string inFileName = "test.txt";
+    ifstream inFile;
+    
+    inFile.open(inFileName);
+    
+    if (inFile.is_open())
+    {
+        string line;
+        
+   
+        while(!inFile.eof())
+        {
+            getline(inFile, line);
+            cout << line << endl;
+        }
+       
+        
+        
+        inFile.close();
+    }
+    else
+    {
+        cout << "Cound not open the file ifstream :(" << inFileName << endl;
+    }
+    
+}
+
+
+void practiceParsingTextFile()
+{
+    string filename = "stats.txt";
+    ifstream inFile;
+    
+    inFile.open(filename);
+    
+    if (inFile.is_open())
+    {
+        
+        while(inFile)
+        {
+            string line;
+            getline(inFile, line, ':');
+            
+            int population;
+            inFile >> population;
+            
+            
+            inFile >> ws;
+            
+            if (!inFile)
+            {
+                break;
+            }
+            
+            cout << line << " " << population << endl;
+        }
+        
+        
+        inFile.close();
+    }
+    else
+    {
+        cout << "can't opem" << endl;
+    }
+    
+    
+}
