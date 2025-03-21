@@ -1,0 +1,45 @@
+{
+    "configurations": [
+
+
+        {
+            "name": "Run BitManipulator Tests",
+            "type": "lldb",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/BitManipulatorTest",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "build-tests",
+            "logging": {
+                "engineLogging": true
+            }
+        },
+        
+        {
+            "name": "Launch PracticeCPlusPlus",
+            "type": "lldb",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/PracticeCPP",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb",
+            "preLaunchTask": "CMake: build",
+            "targetArchitecture": "arm64" // Add this line
+
+        }
+    ],
+    "version": "2.0.0"
+}
