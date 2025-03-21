@@ -6,3 +6,5 @@ build/
 
 # macOS system files (optional but helpful)
 .DS_Store
+
+a.out
