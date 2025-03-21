@@ -536,28 +536,28 @@ void pointerTest(int* ptrCopy, int*& ptrRef)
 
 void testBitManipulator()
 {
-    BitManipulator myObj = BitManipulator();
+    // BitManipulator myObj = BitManipulator();
     
-    int value1 = 0xABCD;
-    int value2 = 0x1234;
-    int value3 = 0x5678;
-    int value4 = 0xABDF;
+    // int value1 = 0xABCD;
+    // int value2 = 0x1234;
+    // int value3 = 0x5678;
+    // int value4 = 0xABDF;
     
-    cout << "Get nth bit " << myObj.getNthBit(value1, 2) << endl;
-    cout << "Get nth bit " << myObj.getNthBit(value2, 6) << endl;
-    cout << "Get nth bit " << myObj.getNthBit(value3, 11) << endl;
-    cout << "Get nth bit " << myObj.getNthBit(value4, 31) << endl;
+    // cout << "Get nth bit " << myObj.getNthBit(value1, 2) << endl;
+    // cout << "Get nth bit " << myObj.getNthBit(value2, 6) << endl;
+    // cout << "Get nth bit " << myObj.getNthBit(value3, 11) << endl;
+    // cout << "Get nth bit " << myObj.getNthBit(value4, 31) << endl;
     
-    myObj.printBits(0xAAAA);
+    // myObj.printBits(0xAAAA);
     
-    int count = myObj.countNumberOfBitsSet(0xAAAA);
-    cout << count << endl;
+    // int count = myObj.countNumberOfBitsSet(0xAAAA);
+    // cout << count << endl;
     
-    count = myObj.countNumOfBitsSetOped(0xAAAA);
-    cout << count << endl;
+    // count = myObj.countNumOfBitsSetOped(0xAAAA);
+    // cout << count << endl;
     
-    count = myObj.reverseBits(0xAAAA, 16);
-    cout << count << endl;
+    // count = myObj.reverseBits(0xAAAA, 16);
+    // cout << count << endl;
     
 }
 
