@@ -9,6 +9,7 @@
 #define Point_hpp
 
 #include <stdio.h>
+#include <iostream>
 
 class Point
 {
