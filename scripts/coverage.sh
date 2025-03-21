@@ -21,13 +21,13 @@ echo "Generating line-by-line coverage report..."
 llvm-cov show "$TEST_BINARY" \
   -instr-profile="$MERGED_PROFILE" \
   -format=text \
-  -ignore-filename-regex='.*/_deps|tests/.*' \
+  -ignore-filename-regex='.*/external|tests/.*' \
   > "$COVERAGE_TXT"
 
 # Generate summary
 echo ""
 echo "Coverage Summary:"
-llvm-cov report "$TEST_BINARY" -instr-profile="$MERGED_PROFILE" -ignore-filename-regex='.*/_deps|tests/.*'
+llvm-cov report "$TEST_BINARY" -instr-profile="$MERGED_PROFILE" -ignore-filename-regex='.*/external|tests/.*'
 
 echo ""
 echo "Detailed report saved to: $COVERAGE_TXT"

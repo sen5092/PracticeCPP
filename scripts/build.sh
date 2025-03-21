@@ -4,27 +4,35 @@
 set -e
 
 # Default flags
-COVERAGE=false
-ANALYZE=false
+REBUILD=false
+COVERAGE=true
 
 # Parse arguments
 for arg in "$@"; do
   case $arg in
-    --coverage)
-      COVERAGE=true
-      shift
+    --rebuild)
+      REBUILD=true
       ;;
-    --analyze)
-      ANALYZE=true
-      shift
+    --no-coverage)
+      COVERAGE=false
       ;;
     *)
       echo "Unknown option: $arg"
-      echo "Usage: $0 [--coverage] [--analyze]"
       exit 1
       ;;
   esac
 done
+
+BUILD_DIR="build"
+
+# Clean build directory if --rebuild is specified
+if [ "$REBUILD" = true ]; then
+  echo "Performing full rebuild..."
+  rm -rf "$BUILD_DIR"
+fi
+
+# Ensure build directory exists
+mkdir -p "$BUILD_DIR"
 
 # Compiler settings
 CXX_COMPILER="clang++"
@@ -39,34 +47,9 @@ if [ "$COVERAGE" = true ]; then
   CMAKE_FLAGS+=" -DCMAKE_EXPORT_COMPILE_COMMANDS=ON"
 fi
 
-BUILD_DIR="build"
 
-# Clean and create build directory
-#rm -rf "$BUILD_DIR"
-mkdir -p "$BUILD_DIR"
+echo "Configuring and building project..."
+eval cmake -B "$BUILD_DIR" -S . $CMAKE_FLAGS
+cmake --build "$BUILD_DIR"
+echo "Build complete in $BUILD_DIR/"
 
-# Run CMake configure step
-if [ "$ANALYZE" = true ]; then
-  echo "Running scan-build static analysis..."
-
-  export CC=/opt/homebrew/opt/llvm/bin/clang
-  export CXX=/opt/homebrew/opt/llvm/bin/clang++
-
-  SCAN_BUILD_OPTS="-v --status-bugs --keep-empty -o $BUILD_DIR/reports"
-
-  cmake -B "$BUILD_DIR" -S . $CMAKE_FLAGS
-  scan-build $SCAN_BUILD_OPTS cmake --build "$BUILD_DIR"
-
-  analyze-build \
-  --cdb build/compile_commands.json \
-  --use-analyzer /opt/homebrew/opt/llvm/bin/clang \
-  --output build/reports
-
-
-  echo "Static analysis complete. Reports saved in $BUILD_DIR/reports/"
-else
-  echo "Configuring and building project..."
-  eval cmake -B "$BUILD_DIR" -S . $CMAKE_FLAGS
-  cmake --build "$BUILD_DIR"
-  echo "Build complete in $BUILD_DIR/"
-fi

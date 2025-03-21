@@ -1,5 +1,8 @@
 include(FetchContent)
 
+set(FETCHCONTENT_BASE_DIR "${CMAKE_SOURCE_DIR}/external")
+set(FETCHCONTENT_QUIET OFF)
+
 # Download Catch2
 FetchContent_Declare(
   Catch2
