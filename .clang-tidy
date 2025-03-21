@@ -1,0 +1,18 @@
+Checks: >
+  clang-analyzer-*,          # Static analysis (null deref, divide by zero, etc.)
+  bugprone-*,                # Common mistake patterns
+  performance-*,             # Inefficient usage (e.g., pass by value)
+  readability-*,             # Readability improvements
+  modernize-*                # C++ best practices (auto, nullptr, etc.)
+
+WarningsAsErrors: ''
+
+HeaderFilterRegex: '.*'
+
+FormatStyle: file
+
+CheckOptions:
+  - key:             readability-identifier-naming.VariableCase
+    value:           lower_case
+  - key:             modernize-use-trailing-return
+    value:           false
