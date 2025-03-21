@@ -4,39 +4,44 @@ This project is a personal C++ playground for reviewing and implementing core te
 
 ---
 
-## CI/CD Pipeline and Tooling
+## 🚀 CI/CD Pipeline and Tooling
 
 This project uses **GitHub Actions** for continuous integration. Key features:
 
-1. **Build & Test**  
-   - Automatically compiles the project with CMake on every push or pull request.
-   - Runs all Catch2 unit tests.
-   - Ensures the build is passing before merging changes.
+### ✅ Build & Test
+- Automatically compiles the project with CMake on every push or pull request.
+- Runs all Catch2 unit tests.
+- Ensures the build passes before merging changes.
 
-2. **Static Analysis (clang-tidy)**  
-   - Checks for potential bugs, bad practices, and performance issues.
-   - Configured with a `.clang-tidy` file to control which checks run.
-   - Results are displayed in the GitHub Actions logs.
+### 🧠 Static Analysis (Clang)
+- **Clang-Tidy** checks for bugs, performance issues, and modern C++ best practices.
+- **Clang Static Analyzer (CSA)** detects logic errors and memory bugs.
+- Controlled via `scripts/analyze.sh` and `.clang-tidy`.
+- Reports are stored in the `build/reports/` directory.
 
-3. **Code Coverage (llvm-cov)**  
-   - Built with Clang coverage instrumentation (`-fprofile-instr-generate`, `-fcoverage-mapping`).
-   - Executes tests and merges profile data into a coverage report.
-   - Uploads a detailed line-by-line coverage file (`coverage.txt`) to GitHub Actions artifacts.
-   - Excludes irrelevant directories (e.g. `_deps/`, `tests/`).
-   - Shows how much of the codebase is exercised by tests.
+### 📈 Code Coverage (LLVM `llvm-cov`)
+- Built using Clang with instrumentation flags.
+- Test coverage is generated with `llvm-profdata` and `llvm-cov`.
+- Generates a line-by-line `coverage.txt` summary for source files.
+- Ignores test files and third-party dependencies.
+- Uploaded as artifacts in GitHub Actions.
 
-### Running the Pipeline Locally
+### 🛠️ Local Development Workflow
 
-You can replicate the CI steps locally:
+> All CI functionality can be reproduced locally using these scripts:
 
-1. **Install Dependencies**  
-   - Clang/LLVM (for instrumentation, static analysis, and coverage)
-   - CMake (for building)
+```bash
+# Clean build with coverage
+./scripts/build.sh --rebuild
 
-2. **Build With Coverage**  
-   ```bash
-   ./scripts/build_with_coverage.sh
+# Build with coverage (default)
+./scripts/build.sh
 
+# Generate coverage report (after tests have run)
+./scripts/coverage.sh
+
+# Run static analysis (CSA + clang-tidy)
+./scripts/analyze.sh --tidy --csa
 
 
 ---
@@ -151,10 +156,21 @@ All functions are implemented as `static` methods and fully unit tested using Ca
 ## ✅ Usage
 
 ```bash
+# Configure and build the project
 cmake -S . -B build
 cmake --build build
+
+# Run app or tests
 ./build/src/PracticeApp
 ./build/tests/UnitTests -s
-./scripts/build_with_coverage.sh
-./scripts/run_coverage.sh
-clang-tidy src/*.cpp -- -Iinclude -std=c++17
+
+# Build with coverage and generate report
+./scripts/build.sh
+./scripts/coverage.sh
+
+# Run clang-tidy analysis
+./scripts/analyze.sh --tidy
+
+# Run both clang-tidy and static analyzer
+./scripts/analyze.sh --tidy --csa
+
