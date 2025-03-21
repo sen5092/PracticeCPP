@@ -4,6 +4,43 @@ This project is a personal C++ playground for reviewing and implementing core te
 
 ---
 
+## CI/CD Pipeline and Tooling
+
+This project uses **GitHub Actions** for continuous integration. Key features:
+
+1. **Build & Test**  
+   - Automatically compiles the project with CMake on every push or pull request.
+   - Runs all Catch2 unit tests.
+   - Ensures the build is passing before merging changes.
+
+2. **Static Analysis (clang-tidy)**  
+   - Checks for potential bugs, bad practices, and performance issues.
+   - Configured with a `.clang-tidy` file to control which checks run.
+   - Results are displayed in the GitHub Actions logs.
+
+3. **Code Coverage (llvm-cov)**  
+   - Built with Clang coverage instrumentation (`-fprofile-instr-generate`, `-fcoverage-mapping`).
+   - Executes tests and merges profile data into a coverage report.
+   - Uploads a detailed line-by-line coverage file (`coverage.txt`) to GitHub Actions artifacts.
+   - Excludes irrelevant directories (e.g. `_deps/`, `tests/`).
+   - Shows how much of the codebase is exercised by tests.
+
+### Running the Pipeline Locally
+
+You can replicate the CI steps locally:
+
+1. **Install Dependencies**  
+   - Clang/LLVM (for instrumentation, static analysis, and coverage)
+   - CMake (for building)
+
+2. **Build With Coverage**  
+   ```bash
+   ./scripts/build_with_coverage.sh
+
+
+
+---
+
 ## ✅ Completed Bit Manipulation Features
 
 The following utility functions have been implemented and tested as part of the `BitManipulator` module:
@@ -118,3 +155,6 @@ cmake -S . -B build
 cmake --build build
 ./build/src/PracticeApp
 ./build/tests/UnitTests -s
+./scripts/build_with_coverage.sh
+./scripts/run_coverage.sh
+clang-tidy src/*.cpp -- -Iinclude -std=c++17
