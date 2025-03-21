@@ -1,1 +1,8 @@
+# Ignore VS Code config files
+.vscode/
+
+# Ignore CMake build directory
+build/
+
+# macOS system files (optional but helpful)
 .DS_Store

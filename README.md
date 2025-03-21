@@ -4,12 +4,21 @@ This project is a personal C++ playground for reviewing and implementing core te
 
 ---
 
-## 🧠 Bit Manipulation
-- [x] `reverseBits()`
-- [x] `countSetBits()`
-- [ ] `checkPowerOfTwo()`
-- [ ] `swapBits()`
-- [ ] `isolateRightmostSetBit()`
+## ✅ Completed Bit Manipulation Features
+
+The following utility functions have been implemented and tested as part of the `BitManipulator` module:
+
+- [x] `getNthBit` – Returns 0 or 1 for the given bit position  
+- [x] `setNthBit` – Returns a copy of the number with the given bit set to 1  
+- [x] `clearNthBit` – Returns a copy of the number with the given bit cleared to 0  
+- [x] `printBits` – Prints a 32-bit binary representation to standard output  
+- [x] `countNumberOfBitsSet` – Counts the number of bits set to 1 using Brian Kernighan’s algorithm  
+- [x] `reverseBits` – Reverses the bits over a given width (e.g. 4, 8, 32 bits)  
+- [x] `swapBits` – Swaps bits at two specified positions  
+- [x] `isPowerOfTwo` – Returns true if the number is a power of two  
+- [x] `isolateRightmostSetBit` – Returns the least significant bit that is set  
+
+All functions are implemented as `static` methods and fully unit tested using Catch2.
 
 ---
 

@@ -1,2 +1,0 @@
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar qc libPracticeLib.a CMakeFiles/PracticeLib.dir/Point.cpp.o CMakeFiles/PracticeLib.dir/HashTable.cpp.o CMakeFiles/PracticeLib.dir/BitManipulator.cpp.o CMakeFiles/PracticeLib.dir/ExceptionPractice.cpp.o CMakeFiles/PracticeLib.dir/TextFilePractice.cpp.o CMakeFiles/PracticeLib.dir/BinaryFiles.cpp.o CMakeFiles/PracticeLib.dir/STLPractice.cpp.o
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib libPracticeLib.a
