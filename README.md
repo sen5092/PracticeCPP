@@ -42,7 +42,7 @@ This project uses **GitHub Actions** for continuous integration. Key features:
 
 # Run static analysis (CSA + clang-tidy)
 ./scripts/analyze.sh --tidy --csa
-
+```
 
 ---
 
@@ -173,4 +173,4 @@ cmake --build build
 
 # Run both clang-tidy and static analyzer
 ./scripts/analyze.sh --tidy --csa
-
+```
