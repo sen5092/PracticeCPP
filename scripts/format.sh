@@ -15,6 +15,7 @@ if [[ "$1" == "--check" ]]; then
             clang-format --style=file "$file" | diff -u --color=always "$file" -
         fi
     done
+    echo "Done checking formatting!"
 
 else
     echo "Formatting files in-place..."
