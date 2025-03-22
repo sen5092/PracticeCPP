@@ -11,108 +11,77 @@
 
 using namespace std;
 
-
-void practiceTextFileStuff()
-{
+void practiceTextFileStuff() {
     ofstream outFile;
     string outputFileName = "test.txt";
-    
+
     outFile.open(outputFileName);
-    
-    if (outFile.is_open())
-    {
+
+    if (outFile.is_open()) {
         cout << "File " << outputFileName << " is open :)" << endl;
-        //cout << outFile.path << endl;
+        // cout << outFile.path << endl;
         outFile << "Hello World bb." << endl;
         outFile << "my name is Scott " << endl;
         outFile << 123445 << endl;
-        
-        for (int i = 1; i <= 10; i++)
-        {
+
+        for (int i = 1; i <= 10; i++) {
             outFile << i << " Here is a line. " << endl;
         }
-        
+
         outFile.close();
-    }
-    else
-    {
+    } else {
         cout << "Couldn't open the file " << outputFileName << endl;
     }
-    
-    
-    
-    
 }
 
-
-void practiceReadingTextFiles()
-{
+void practiceReadingTextFiles() {
     cout << "Practing Reading Text Files" << endl;
-    
+
     string inFileName = "test.txt";
     ifstream inFile;
-    
+
     inFile.open(inFileName);
-    
-    if (inFile.is_open())
-    {
+
+    if (inFile.is_open()) {
         string line;
-        
-   
-        while(!inFile.eof())
-        {
+
+        while (!inFile.eof()) {
             getline(inFile, line);
             cout << line << endl;
         }
-       
-        
-        
+
         inFile.close();
-    }
-    else
-    {
+    } else {
         cout << "Cound not open the file ifstream :(" << inFileName << endl;
     }
-    
 }
 
-
-void practiceParsingTextFile()
-{
+void practiceParsingTextFile() {
     string filename = "stats.txt";
     ifstream inFile;
-    
+
     inFile.open(filename);
-    
-    if (inFile.is_open())
-    {
-        
-        while(inFile)
-        {
+
+    if (inFile.is_open()) {
+
+        while (inFile) {
             string line;
             getline(inFile, line, ':');
-            
+
             int population;
             inFile >> population;
-            
-            
+
             inFile >> ws;
-            
-            if (!inFile)
-            {
+
+            if (!inFile) {
                 break;
             }
-            
+
             cout << line << " " << population << endl;
         }
-        
-        
+
         inFile.close();
-    }
-    else
-    {
+    } else {
         cout << "can't opem" << endl;
     }
-    
-    
 }

@@ -8,47 +8,29 @@
 #ifndef Point_hpp
 #define Point_hpp
 
-#include <stdio.h>
 #include <iostream>
+#include <stdio.h>
 
-class Point
-{
-public:
-    
+class Point {
+  public:
     Point();
     Point(int x, int y);
     ~Point();
-  
+
     Point operator+(const Point& pt);
     friend Point operator*(const int mult, const Point& pt);
     friend std::ostream& operator<<(std::ostream& os, Point pt);
-    
+
     // Copy constructor
-    Point(const Point& p1)
-    {
+    Point(const Point& p1) {
         std::cout << " copy constructing!" << std::endl;
         x = p1.x;
         y = p1.y;
     }
-    
-    
-private:
-    
-    
+
+  private:
     int x;
     int y;
-    
-    
-    
-
-
-
-    
-    
-    
-    
-    
 };
-
 
 #endif /* Point_hpp */

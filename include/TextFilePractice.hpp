@@ -10,7 +10,6 @@
 
 #include <stdio.h>
 
-
 void practiceTextFileStuff();
 
 void practiceReadingTextFiles();

@@ -8,24 +8,19 @@
 #ifndef BinaryFiles_hpp
 #define BinaryFiles_hpp
 
-#include <stdio.h>
 #include <iostream>
+#include <stdio.h>
 using namespace std;
 
 // structs get padded to make memory look up more effeicent so turn off packing
 // by making aligning happen on single byte boundaries
 #pragma pack(push, 1)
-struct Person
-{
+struct Person {
     char name[50];
     int age;
     double weight;
-    
-    
-    
 };
 #pragma pack(pop)
-
 
 void practiceReadingBinaryFiles();
 
