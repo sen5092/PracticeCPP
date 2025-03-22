@@ -12,13 +12,10 @@
 
 #include <bitset>
 
+class BitManipulator {
 
-class BitManipulator
-{
-    
-public:
-    
-    BitManipulator() = delete; ///< Static class, no instances allowed
+  public:
+    BitManipulator() = delete;  ///< Static class, no instances allowed
     ~BitManipulator() = delete; ///< Static class, no instances allowed
 
     /**
@@ -28,8 +25,6 @@ public:
      * of bits typically used to represent an unsigned integer on the current platform.
      */
     static constexpr int BITS_IN_INT = (sizeof(unsigned int) * 8);
-    
-
 
     /**
      * @brief Returns the value of the bit at the specified position.
@@ -52,7 +47,7 @@ public:
      * @param pos The bit position to set (0-indexed from LSB).
      * @return A new number with the bit at `pos` set to 1.
      */
-    static unsigned int setNthBit (unsigned int num, unsigned int pos);
+    static unsigned int setNthBit(unsigned int num, unsigned int pos);
 
     /**
      * @brief Returns a new number with the specified bit cleared to 0.
@@ -129,7 +124,7 @@ public:
      * @return An unsigned int with only the rightmost 1-bit of num set, or 0 if num is 0.
      */
     static unsigned int isolateRightmostSetBit(unsigned int num);
-    
+
     /**
      * @file BitManipulator.hpp
      * @brief Utility class for practicing common bit manipulation techniques in C++.
@@ -139,7 +134,6 @@ public:
      * commonly seen in technical interviews and systems programming.
      */
     static unsigned int reverseBits(unsigned int num, int bitWidth);
-    
 };
 
 #endif /* BITMANIPULATOR_HPP */

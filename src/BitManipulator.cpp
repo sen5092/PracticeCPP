@@ -12,11 +12,9 @@
  * All functions are designed for general-purpose usage and are thoroughly unit tested.
  */
 
-
 #include "BitManipulator.hpp"
-#include <iostream>
 #include <bitset>
-
+#include <iostream>
 
 /**
  * @brief Returns the value of the bit at the specified position.
@@ -29,8 +27,7 @@
  * @return 1 if the bit at position `pos` is set, otherwise 0.
  */
 
-unsigned int BitManipulator::getNthBit(unsigned int num, unsigned int pos)
-{   
+unsigned int BitManipulator::getNthBit(unsigned int num, unsigned int pos) {
     return (num >> pos) & 1;
 }
 
@@ -44,10 +41,9 @@ unsigned int BitManipulator::getNthBit(unsigned int num, unsigned int pos)
  * @param pos The bit position to set (0-indexed from LSB).
  * @return A new number with the bit at `pos` set to 1.
  */
-unsigned int BitManipulator::setNthBit(unsigned int num, unsigned int pos)
-{
+unsigned int BitManipulator::setNthBit(unsigned int num, unsigned int pos) {
     const unsigned int bitToSet = 1u << pos;
-    
+
     return (num | bitToSet);
 }
 
@@ -62,12 +58,10 @@ unsigned int BitManipulator::setNthBit(unsigned int num, unsigned int pos)
  * @return A copy of the input number with the bit at `pos` cleared to 0.
  */
 
-unsigned int BitManipulator::clearNthBit(unsigned int num, unsigned int pos)
-{
-    unsigned int bitToClear = 1 << pos;   // Create mask with 1 at pos
-    bitToClear = ~bitToClear;             // Invert mask: all 1s except at pos
-    return (num & bitToClear);            // Use AND to zero out that bit
-    
+unsigned int BitManipulator::clearNthBit(unsigned int num, unsigned int pos) {
+    unsigned int bitToClear = 1 << pos; // Create mask with 1 at pos
+    bitToClear = ~bitToClear;           // Invert mask: all 1s except at pos
+    return (num & bitToClear);          // Use AND to zero out that bit
 }
 
 /**
@@ -75,23 +69,18 @@ unsigned int BitManipulator::clearNthBit(unsigned int num, unsigned int pos)
  *
  * @param num The number to print.
  */
-void BitManipulator::printBits(unsigned int num)
-{
-    for (int i = BitManipulator::BITS_IN_INT-1;  i >= 0; i--)
-    {
+void BitManipulator::printBits(unsigned int num) {
+    for (int i = BitManipulator::BITS_IN_INT - 1; i >= 0; i--) {
         unsigned int checkBit = 1 << i;
         int toPrint = num & checkBit;
-        
-        if (toPrint == checkBit)
-        {
-            std::cout <<  "1";
-        }
-        else
-        {
-            std::cout <<  "0";
+
+        if (toPrint == checkBit) {
+            std::cout << "1";
+        } else {
+            std::cout << "0";
         }
     }
-    
+
     std::cout << "\n";
 }
 
@@ -105,16 +94,14 @@ void BitManipulator::printBits(unsigned int num)
  * @param num The number to analyze.
  * @return The number of bits set to 1.
  */
-int BitManipulator::countNumberOfBitsSet(unsigned int num)
-{
+int BitManipulator::countNumberOfBitsSet(unsigned int num) {
     int count = 0;
-    
-    while (num)
-    {
+
+    while (num) {
         num = num & (num - 1);
         count++;
     }
-    
+
     return count;
 }
 
@@ -128,24 +115,23 @@ int BitManipulator::countNumberOfBitsSet(unsigned int num)
  * @param bitWidth The number of bits to reverse (e.g., 4, 8, 32).
  * @return The bit-reversed value over the specified bit width.
  */
-unsigned int BitManipulator::reverseBits(unsigned int num, int bitWidth)
-{
+unsigned int BitManipulator::reverseBits(unsigned int num, int bitWidth) {
     unsigned int result = 0;
 
-    std::cout << "Initial num    : " << std::bitset<32>(num).to_string().substr(32 - bitWidth) << "\n";
+    std::cout << "Initial num    : " << std::bitset<32>(num).to_string().substr(32 - bitWidth)
+              << "\n";
 
-    for (int i = 0; i < bitWidth; i++)
-    {
-        unsigned int bit = num & 1; // extract the least significant bit
+    for (int i = 0; i < bitWidth; i++) {
+        unsigned int bit = num & 1;   // extract the least significant bit
         result = (result << 1) | bit; // shift the result left and add the bit
         num >>= 1;
     }
 
-    std::cout << "Final reversed : " << std::bitset<32>(result).to_string().substr(32 - bitWidth) << "\n\n";
+    std::cout << "Final reversed : " << std::bitset<32>(result).to_string().substr(32 - bitWidth)
+              << "\n\n";
 
     return result;
 }
-
 
 /**
  * @brief Checks whether a given unsigned integer is a power of two.
@@ -157,11 +143,9 @@ unsigned int BitManipulator::reverseBits(unsigned int num, int bitWidth)
  * @param num The number to evaluate.
  * @return true if num is a power of two (≥2), false otherwise.
  */
-bool BitManipulator::isPowerOfTwo(unsigned int num)
-{
-    return ( (num >= 2) && ((num & (num - 1)) == 0) );
+bool BitManipulator::isPowerOfTwo(unsigned int num) {
+    return ((num >= 2) && ((num & (num - 1)) == 0));
 }
-
 
 /**
  * @brief Isolates the rightmost set bit in an unsigned integer.
@@ -170,11 +154,9 @@ bool BitManipulator::isPowerOfTwo(unsigned int num)
  * Otherwise, returns num & -num — a classic bit manipulation trick
  * that zeroes out all bits except the least significant 1.
  */
-unsigned int BitManipulator::isolateRightmostSetBit(unsigned int num)
-{
+unsigned int BitManipulator::isolateRightmostSetBit(unsigned int num) {
     return num & -num;
 }
-
 
 /**
  * @brief Swaps the bits at two positions in a number if they differ.
@@ -186,22 +168,20 @@ unsigned int BitManipulator::isolateRightmostSetBit(unsigned int num)
  * @param pos2 Index of the second bit to swap.
  * @return The resulting number after swapping the bits.
  */
-unsigned int BitManipulator::swapBits(unsigned int num, unsigned int pos1, unsigned int pos2)
-{
+unsigned int BitManipulator::swapBits(unsigned int num, unsigned int pos1, unsigned int pos2) {
     unsigned int result = num;
 
     unsigned int bit1 = (num >> pos1) & 1;
     unsigned int bit2 = (num >> pos2) & 1;
 
-    if (pos1 == pos2 ) {
+    if (pos1 == pos2) {
         result = num; // no change needed
-    }
-    else if (bit1 == bit2) {
+    } else if (bit1 == bit2) {
         result = num; // no change needed
     } else {
         result ^= (1u << pos1);
         result ^= (1u << pos2);
     }
-    
+
     return result;
 }
