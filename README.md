@@ -11,7 +11,9 @@ This project uses **GitHub Actions** for continuous integration. Key features:
 ### ✅ Build & Test
 - Automatically compiles the project with CMake on every push or pull request.
 - Runs all Catch2 unit tests.
-- Ensures the build passes before merging changes.
+- Runs code coverage.
+- Runs static analysis.
+- Runs code formatting (review only, no apply).
 
 ### 🧠 Static Analysis (Clang)
 - **Clang-Tidy** checks for bugs, performance issues, and modern C++ best practices.
@@ -26,6 +28,11 @@ This project uses **GitHub Actions** for continuous integration. Key features:
 - Ignores test files and third-party dependencies.
 - Uploaded as artifacts in GitHub Actions.
 
+### Code Formatting (Clang-Format)
+- **Clang-Format** checks in `/src` and `/include` for all `*.cpp` and `*.hpp` files. 
+- Controller via `scripts/format.sh` and `.clang-format`.
+- By default, `format.sh` will apply formatting, add `--check` for dry-run and differences.
+
 ### 🛠️ Local Development Workflow
 
 > All CI functionality can be reproduced locally using these scripts:
@@ -37,11 +44,14 @@ This project uses **GitHub Actions** for continuous integration. Key features:
 # Build with coverage (default)
 ./scripts/build.sh
 
-# Generate coverage report (after tests have run)
+# Generate coverage report (and runs tests)
 ./scripts/coverage.sh
 
 # Run static analysis (CSA + clang-tidy)
 ./scripts/analyze.sh --tidy --csa
+
+# Run formatting (applies changes automatically by default)
+./scripts/format.sh --check
 ```
 
 ---
@@ -163,14 +173,4 @@ cmake --build build
 # Run app or tests
 ./build/src/PracticeApp
 ./build/tests/UnitTests -s
-
-# Build with coverage and generate report
-./scripts/build.sh
-./scripts/coverage.sh
-
-# Run clang-tidy analysis
-./scripts/analyze.sh --tidy
-
-# Run both clang-tidy and static analyzer
-./scripts/analyze.sh --tidy --csa
 ```
